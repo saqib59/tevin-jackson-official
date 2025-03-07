@@ -11,7 +11,7 @@ get_header(); ?>
         <p>This is a home page template.</p>
     </section>
 
-    <section class="content">
+    <section class="fd-content content">
         <?php
         if (have_posts()) :
             while (have_posts()) : the_post();
