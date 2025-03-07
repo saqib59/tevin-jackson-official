@@ -1,14 +1,14 @@
 <?php
 /**
- * Template Name: Home
+ * Template Name: About
  */
 
 get_header(); ?>
 
 <main id="main-content">
-    <section class="flex h-screen">
-        <h1 class="text-3xl font-bold justify-center items-center underline text-clifford">
-        Flipping Detroit !
+    <section class="flex h-screen justify-center items-center">
+        <h1 class="text-3xl font-bold underline text-clifford">
+        About us !
         </h1>
     </section>
 
