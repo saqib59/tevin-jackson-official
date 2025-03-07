@@ -174,6 +174,11 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Includes.
+ */
+require get_template_directory() . '/inc/hooks/class-hooks-and-filters.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
