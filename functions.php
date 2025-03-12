@@ -138,10 +138,14 @@ add_action( 'widgets_init', 'tevin_jackson_official_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tevin_jackson_official_scripts() {
-	wp_enqueue_style( 'tevin-jackson-official-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'tevin-jackson-official-style', get_template_directory_uri() . '/_ui/css/theme.css', array(), _S_VERSION );
+	wp_enqueue_style( 'tj-slick', get_template_directory_uri() . '/_ui/css/slick-min.css', array(), _S_VERSION );
 	wp_style_add_data( 'tevin-jackson-official-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'tevin-jackson-official-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'tj-jquery', get_template_directory_uri() . '/_ui/js/jquery.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'tj-slick-js', get_template_directory_uri() . '/_ui/js/slick.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'tevin-jackson-official-navigation', get_template_directory_uri() . '/_ui/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'tevin-jackson-official-js', get_template_directory_uri() . '/_ui/js/theme.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
