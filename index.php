@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Flipping_Detroit
+ * @package Tevin_Jackson_Official
  */
 
 get_header();

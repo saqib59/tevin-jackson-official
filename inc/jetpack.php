@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Flipping_Detroit
+ * @package Tevin_Jackson_Official
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function flipping_detroit_jetpack_setup() {
+function tevin_jackson_official_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'flipping_detroit_infinite_scroll_render',
+			'render'    => 'tevin_jackson_official_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function flipping_detroit_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'flipping-detroit-style',
+				'stylesheet' => 'tevin-jackson-official-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,13 +48,13 @@ function flipping_detroit_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'flipping_detroit_jetpack_setup' );
+add_action( 'after_setup_theme', 'tevin_jackson_official_jetpack_setup' );
 
-if ( ! function_exists( 'flipping_detroit_infinite_scroll_render' ) ) :
+if ( ! function_exists( 'tevin_jackson_official_infinite_scroll_render' ) ) :
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function flipping_detroit_infinite_scroll_render() {
+	function tevin_jackson_official_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :

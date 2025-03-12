@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Flipping_Detroit
+ * @package Tevin_Jackson_Official
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses flipping_detroit_header_style()
+ * @uses tevin_jackson_official_header_style()
  */
-function flipping_detroit_custom_header_setup() {
+function tevin_jackson_official_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'flipping_detroit_custom_header_args',
+			'tevin_jackson_official_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'flipping_detroit_header_style',
+				'wp-head-callback'   => 'tevin_jackson_official_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'flipping_detroit_custom_header_setup' );
+add_action( 'after_setup_theme', 'tevin_jackson_official_custom_header_setup' );
 
-if ( ! function_exists( 'flipping_detroit_header_style' ) ) :
+if ( ! function_exists( 'tevin_jackson_official_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see flipping_detroit_custom_header_setup().
+	 * @see tevin_jackson_official_custom_header_setup().
 	 */
-	function flipping_detroit_header_style() {
+	function tevin_jackson_official_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

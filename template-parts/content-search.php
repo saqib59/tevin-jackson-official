@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Flipping_Detroit
+ * @package Tevin_Jackson_Official
  */
 
 ?>
@@ -16,20 +16,20 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php
-			flipping_detroit_posted_on();
-			flipping_detroit_posted_by();
+			tevin_jackson_official_posted_on();
+			tevin_jackson_official_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php flipping_detroit_post_thumbnail(); ?>
+	<?php tevin_jackson_official_post_thumbnail(); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php flipping_detroit_entry_footer(); ?>
+		<?php tevin_jackson_official_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

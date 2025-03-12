@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Flipping_Detroit
+ * @package Tevin_Jackson_Official
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

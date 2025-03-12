@@ -1,8 +1,8 @@
 <?php
 /**
- * Flipping Detroit Theme Customizer
+ * Tevin Jackson Official Theme Customizer
  *
- * @package Flipping_Detroit
+ * @package Tevin_Jackson_Official
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function flipping_detroit_customize_register( $wp_customize ) {
+function tevin_jackson_official_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -20,26 +20,26 @@ function flipping_detroit_customize_register( $wp_customize ) {
 			'blogname',
 			array(
 				'selector'        => '.site-title a',
-				'render_callback' => 'flipping_detroit_customize_partial_blogname',
+				'render_callback' => 'tevin_jackson_official_customize_partial_blogname',
 			)
 		);
 		$wp_customize->selective_refresh->add_partial(
 			'blogdescription',
 			array(
 				'selector'        => '.site-description',
-				'render_callback' => 'flipping_detroit_customize_partial_blogdescription',
+				'render_callback' => 'tevin_jackson_official_customize_partial_blogdescription',
 			)
 		);
 	}
 }
-add_action( 'customize_register', 'flipping_detroit_customize_register' );
+add_action( 'customize_register', 'tevin_jackson_official_customize_register' );
 
 /**
  * Render the site title for the selective refresh partial.
  *
  * @return void
  */
-function flipping_detroit_customize_partial_blogname() {
+function tevin_jackson_official_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -48,14 +48,14 @@ function flipping_detroit_customize_partial_blogname() {
  *
  * @return void
  */
-function flipping_detroit_customize_partial_blogdescription() {
+function tevin_jackson_official_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function flipping_detroit_customize_preview_js() {
-	wp_enqueue_script( 'flipping-detroit-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+function tevin_jackson_official_customize_preview_js() {
+	wp_enqueue_script( 'tevin-jackson-official-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
 }
-add_action( 'customize_preview_init', 'flipping_detroit_customize_preview_js' );
+add_action( 'customize_preview_init', 'tevin_jackson_official_customize_preview_js' );

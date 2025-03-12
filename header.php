@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Flipping_Detroit
+ * @package Tevin_Jackson_Official
  */
 
 ?>
@@ -18,13 +18,12 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'flipping-detroit' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'tevin-jackson-official' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -39,15 +38,15 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$flipping_detroit_description = get_bloginfo( 'description', 'display' );
-			if ( $flipping_detroit_description || is_customize_preview() ) :
+			$tevin_jackson_official_description = get_bloginfo( 'description', 'display' );
+			if ( $tevin_jackson_official_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $flipping_detroit_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<p class="site-description"><?php echo $tevin_jackson_official_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'flipping-detroit' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tevin-jackson-official' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(

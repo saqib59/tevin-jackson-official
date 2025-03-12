@@ -6,23 +6,23 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Flipping_Detroit
+ * @package Tevin_Jackson_Official
  */
 
 ?>
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'flipping-detroit' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tevin-jackson-official' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'flipping-detroit' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'tevin-jackson-official' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s', 'flipping-detroit' ), 'flipping-detroit', );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'tevin-jackson-official' ), 'tevin-jackson-official', '<a href="http://underscores.me/">Underscores.me</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
