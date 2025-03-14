@@ -3,7 +3,12 @@
  * Template Name: Home
  */
 
-get_header(); ?>
+get_header(); 
+
+$header_video = get_field('header_video');
+$about_section = get_field('about_section');
+// var_dump($about_section);exit;
+?>
 
 <div id="body">
     <!-- Header -->
@@ -168,7 +173,7 @@ get_header(); ?>
     <!-- Video Banner Start -->
     <section class="hero-section">
         <video autoplay muted loop playsinline>
-            <source src="<?php echo get_template_directory_uri() ?>/img/videoplayback1.mp4" type="video/mp4">
+            <source src="<?php echo $header_video; ?>" type="video/mp4">
         </video>
         <div class="container">
             <div class="hero-content-row">
@@ -265,79 +270,33 @@ get_header(); ?>
     <!-- About Section Start -->
     <section class="about_section">
         <div class="container">
-            <h4>
-                <span>American Businessman & Real Estate Investor</span>
-            </h4>
-            <div class="text-center">
-                <h2>ABOUT TEVIN JACKSON</h2>
-            </div>
+            <?php if(!empty($about_section['top_heading'])): ?>
+                <h4>
+                    <span><?php echo $about_section['top_heading']; ?></span>
+                </h4>
+            <?php endif; ?>
+            <?php if(!empty($about_section['main_heading'])): ?>
+                <div class="text-center">
+                    <h2><?php echo $about_section['main_heading']; ?></h2>
+                </div>
+            <?php endif; ?>
+            
             <div class="about_row">
-                <div class="content">
-                    <p>Grant Cardone owns and operates over seven privately held companies, and a private equity real estate firm, Cardone Capital, with a multifamily portfolio of assets worth over $4.7 Billion. He is one of the Top Crowdfunders in the world, raising over $1.4 Billion in equity via social media.He is featured on Season 2 of Discovery Channel’s Undercover Billionaire, where he takes on the challenge of building a million dollar business in 90 days. Grant is also a New York Times bestselling author of 11 business books, including The 10X Rule, which led to Cardone establishing the 10X Global Movement and the 10X Growth Conference, now the largest business and entrepreneur conference in the world.</p>
-                    <div class="glass_button">
-                        <div class="button_wrap">
-                            <a href="#">About Tevin</a>
-                        </div>
+                <?php if(!empty($about_section['text_left'])): ?>
+                    <div class="content">
+                        <?php echo $about_section['text_left']; ?>
                     </div>
-                </div>
-                <div class="image">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/gc_profile.webp" class="img-fluid" alt="">
-                </div>
-                <div class="content">
-                    <p>The online business and sales educational platforms he created serve over 650,000 individuals and Forbes 100 clients throughout the world. Voted the top Marketing Influencer to watch by Forbes, Cardone uses his massive 16 million plus following to give back via his Grant Cardone Foundation, a non-profit organization dedicated to mentoring underprivileged and troubled youth in financial literacy.</p>
-                    <ul>
-                        <li>
-                            <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="Currentcolor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
-                                </svg>
-                            </i>
-                            CEO of Cardone <span>Enterprises</span>
-                        </li>
-                        <li>
-                            <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="Currentcolor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
-                                </svg>
-                            </i>
-                            CEO of Cardone <span>Capital</span>
-                        </li>
-                        <li>
-                            <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="Currentcolor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
-                                </svg>
-                            </i>
-                            International <span>Speaker</span>
-                        </li>
-                        <li>
-                            <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="Currentcolor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
-                                </svg>
-                            </i>
-                            <span>Entrepreneur</span>
-                        </li>
-                        <li>
-                            <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="Currentcolor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
-                                </svg>
-                            </i>
-                            New York Times <span>Best-selling</span>
-                            Author
-                        </li>
-                        <li>
-                            <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="Currentcolor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
-                                </svg>
-                            </i>
-                            Creator of 21 <span>Best-selling</span>
-                            Business Programs
-                        </li>
-                    </ul>
-                </div>
+                <?php endif; ?>
+                <?php if(!empty($about_section['about_image'])): ?>
+                    <div class="image">
+                        <img src="<?php echo $about_section['about_image']; ?>" class="img-fluid" alt="">
+                    </div>
+                <?php endif; ?>
+                <?php if(!empty($about_section['text_right'])): ?>
+                    <div class="content">
+                        <?php echo $about_section['text_right']; ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </section>
@@ -401,80 +360,7 @@ get_header(); ?>
     <!-- Service Section End -->
 
     <!-- Testimonials Section Start -->
-    <section class="testimonial_section">
-        <h2>WHAT INDUSTRY LEADERS HAVE TO SAY</h2>
-        <div id="splide" class="splide">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/danelle-delgado.webp">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/ricardo-allen.webp">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/tim-grover.webp">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/usher-raymond-1.webp">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/jorge-masvidal-2.png" data-src="img/jorge-masvidal-2.png" alt="lorem ipsum dolor sit"/>
-                    </li>
-                    <li class="splide__slide">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/matt-joyce.png" data-src="img/matt-joyce.png" alt="lorem ipsum dolor sit"/>
-                    </li>
-                    <li class="splide__slide">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/logan-paul.png" data-src="img/logan-paul.png" alt="lorem ipsum dolor sit"/>
-                    </li>
-                    <li class="splide__slide">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/snoop-dogg.png" data-src="img/snoop-dogg.png" alt="lorem ipsum dolor sit"/>
-                    </li>
-                    <li class="splide__slide">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/derek-jeter.png">
-                    </li>
-                    <li class="splide__slide">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/floyd-mayweather.png">
-                    </li>
-                    <li class="splide__slide">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/gchomepage-johntravolta-v3-copy.png">
-                    </li>
-                    <li class="splide__slide">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/gloria-mayfield-banks.png">
-                    </li>
-                    <li class="splide__slide">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/jon-taffer.png">
-                    </li>
-                    <li class="splide__slide">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/kevin-harrington.png">
-                    </li>
-                    <li class="splide__slide">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/ricardo-allen.webp">
-                    </li>
-                    <li class="splide__slide">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/rich-the-kid.png">
-                    </li>
-                    <li class="splide__slide">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/sylvester-stallone.png">
-                    </li>
-                    <li class="splide__slide">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/udonis-haslem.png">
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="loader-btn">
-            <div id="circle-loader-wrap">
-                <div class="left-wrap">
-                    <div class="loader"></div>
-                </div>
-                <div class="right-wrap">
-                    <div class="loader"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php get_template_part('template-parts/testimonials'); ?>
     <!-- Testimonials Section Start -->
     
     <!-- Use Book Section Start -->

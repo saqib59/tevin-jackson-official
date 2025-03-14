@@ -174,9 +174,22 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Admin.
+ */
+require_once get_template_directory() . '/inc/admin/class-admin-notices.php';
+require_once get_template_directory() . '/inc/admin/class-acf.php';
+
+
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+function my_acf_json_save_point( $path ) {
+    return get_template_directory() . '/inc/acf-json';
+}
+add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
